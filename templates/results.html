@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %}Assessment Results - AIReady{% endblock %}
+
+{% block content %}
+<div class="results-container">
+    <div class="container">
+        <div class="results-header">
+            <h1>Your AI Readiness Assessment Results</h1>
+            <div class="company-info">
+                <h2>{{ assessment.company_info.name }}</h2>
+                <p>{{ assessment.company_info.size }} | {{ assessment.company_info.industry }}</p>
+            </div>
+        </div>
+
+        <div class="score-overview">
+            <div class="overall-score">
+                <div class="score-circle">
+                    <div class="score-number">{{ "%.1f"|format(assessment.overall_score) }}</div>
+                    <div class="score-label">Overall Score</div>
+                </div>
+                <div class="score-description">
+                    {% if assessment.overall_score >= 4.0 %}
+                    <h3>Excellent AI Readiness</h3>
+                    <p>Your organization is well-positioned for AI adoption with strong fundamentals across key areas.</p>
+                    {% elif assessment.overall_score >= 3.0 %}
+                    <h3>Good AI Foundation</h3>
+                    <p>Your organization has solid groundwork for AI initiatives with some areas for improvement.</p>
+                    {% elif assessment.overall_score >= 2.0 %}
+                    <h3>Developing AI Capability</h3>
+                    <p>Your organization shows promise but needs focused development in several key areas.</p>
+                    {% else %}
+                    <h3>Early AI Journey</h3>
+                    <p>Your organization is in the early stages of AI readiness and would benefit from foundational work.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="category-scores">
+            <h2>Category Breakdown</h2>
+            <div class="categories-grid">
+                {% for category_id, score_data in assessment.category_scores.items() %}
+                {% set category_info = categories[category_id] %}
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>{{ category_info.name }}</h3>
+                        <div class="category-score">{{ "%.1f"|format(score_data.score) }}/5.0</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: {{ (score_data.score/5.0*100)|round }}%"></div>
+                    </div>
+                    <p class="category-description">{{ category_info.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="recommendations">
+            <h2>Personalized Recommendations</h2>
+            <div class="recommendations-list">
+                {% for rec in assessment.recommendations %}
+                <div class="recommendation-card priority-{{ rec.priority.lower() }}">
+                    <div class="recommendation-header">
+                        <span class="priority-badge">{{ rec.priority }} Priority</span>
+                        <h3>{{ rec.title }}</h3>
+                        <p class="category-tag">{{ rec.category }}</p>
+                    </div>
+                    <p class="recommendation-description">{{ rec.description }}</p>
+                    <div class="action-items">
+                        <h4>Recommended Actions:</h4>
+                        <ul>
+                            {% for action in rec.actions %}
+                            <li>{{ action }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="next-steps">
+            <h2>Next Steps</h2>
+            <div class="next-steps-grid">
+                <div class="step-card">
+                    <div class="step-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Share Results</h3>
+                    <p>Discuss these findings with your leadership team and key stakeholders.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3>Create Roadmap</h3>
+                    <p>Develop a prioritized action plan based on our recommendations.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Start Implementation</h3>
+                    <p>Begin with quick wins to build momentum for your AI journey.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="/assessment" class="btn btn-secondary">Take Assessment Again</a>
+            <a href="/resources" class="btn btn-primary">Explore Resources</a>
+            <button onclick="window.print()" class="btn btn-outline">Print Results</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Add any results-specific JavaScript here
+document.addEventListener('DOMContentLoaded', function() {
+    // Animate progress bars
+    const progressBars = document.querySelectorAll('.progress-fill');
+    progressBars.forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = '0%';
+        setTimeout(() => {
+            bar.style.width = width;
+        }, 500);
+    });
+});
+</script>
+{% endblock %}

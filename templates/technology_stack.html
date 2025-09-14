@@ -1,0 +1,556 @@
+{% extends "base.html" %}
+
+{% block title %}Technology Stack Resources - Sapius AI Readiness{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="mb-5">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url_for('resources') }}" class="text-light">Resources</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Technology Stack</li>
+                    </ol>
+                </nav>
+                <h1 class="display-4 fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">AI Technology Stack</h1>
+                <p class="fs-5 text-light mb-4" style="font-family: 'Source Sans Pro', sans-serif;">
+                    Comprehensive guide to AI platforms, tools, and infrastructure components for building scalable AI solutions.
+                    From cloud platforms to open-source frameworks, find the right technology stack for your AI initiatives.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cloud AI Platforms -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">
+                <i class="fas fa-cloud me-3"></i>Cloud AI Platforms
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Google Cloud AI Platform</h5>
+                            <p class="card-text text-light">End-to-end ML platform with AutoML, Vertex AI, and pre-trained APIs.</p>
+                            <a href="https://cloud.google.com/ai-platform" target="_blank" class="btn btn-outline-light">Explore Platform</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Amazon SageMaker</h5>
+                            <p class="card-text text-light">Fully managed service to build, train, and deploy ML models at scale.</p>
+                            <a href="https://aws.amazon.com/sagemaker/" target="_blank" class="btn btn-outline-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Azure Machine Learning</h5>
+                            <p class="card-text text-light">Enterprise-grade ML service for the complete ML lifecycle.</p>
+                            <a href="https://azure.microsoft.com/en-us/services/machine-learning/" target="_blank" class="btn btn-outline-light">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">IBM Watson Studio</h5>
+                            <p class="card-text text-light">Integrated environment for data scientists and business analysts.</p>
+                            <a href="https://www.ibm.com/cloud/watson-studio" target="_blank" class="btn btn-outline-light">View Platform</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Oracle Cloud AI</h5>
+                            <p class="card-text text-light">Comprehensive AI and ML services with pre-built applications.</p>
+                            <a href="https://www.oracle.com/artificial-intelligence/" target="_blank" class="btn btn-outline-light">Discover AI</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Databricks</h5>
+                            <p class="card-text text-light">Unified analytics platform for big data and machine learning.</p>
+                            <a href="https://databricks.com/" target="_blank" class="btn btn-outline-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ML Frameworks & Libraries -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">
+                <i class="fas fa-code me-3"></i>ML Frameworks & Libraries
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">TensorFlow</h5>
+                            <p class="card-text text-light">Google's open-source machine learning framework for production and research.</p>
+                            <a href="https://www.tensorflow.org/" target="_blank" class="btn btn-outline-light">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">PyTorch</h5>
+                            <p class="card-text text-light">Facebook's dynamic neural network framework with strong GPU acceleration.</p>
+                            <a href="https://pytorch.org/" target="_blank" class="btn btn-outline-light">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Scikit-learn</h5>
+                            <p class="card-text text-light">Simple and efficient tools for predictive data analysis in Python.</p>
+                            <a href="https://scikit-learn.org/" target="_blank" class="btn btn-outline-light">View Docs</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Keras</h5>
+                            <p class="card-text text-light">High-level neural networks API for fast experimentation.</p>
+                            <a href="https://keras.io/" target="_blank" class="btn btn-outline-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">XGBoost</h5>
+                            <p class="card-text text-light">Optimized gradient boosting framework for structured data.</p>
+                            <a href="https://xgboost.readthedocs.io/" target="_blank" class="btn btn-outline-light">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Apache Spark MLlib</h5>
+                            <p class="card-text text-light">Scalable machine learning library for big data processing.</p>
+                            <a href="https://spark.apache.org/mllib/" target="_blank" class="btn btn-outline-light">Explore MLlib</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Hugging Face Transformers</h5>
+                            <p class="card-text text-light">State-of-the-art pre-trained models for NLP tasks.</p>
+                            <a href="https://huggingface.co/transformers/" target="_blank" class="btn btn-outline-light">Browse Models</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">OpenCV</h5>
+                            <p class="card-text text-light">Computer vision and image processing library.</p>
+                            <a href="https://opencv.org/" target="_blank" class="btn btn-outline-light">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Apache MXNet</h5>
+                            <p class="card-text text-light">Flexible and efficient deep learning framework.</p>
+                            <a href="https://mxnet.apache.org/" target="_blank" class="btn btn-outline-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MLOps & Model Deployment -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">
+                <i class="fas fa-rocket me-3"></i>MLOps & Model Deployment
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">MLflow</h5>
+                            <p class="card-text text-light">Open source platform for the complete ML lifecycle management.</p>
+                            <a href="https://mlflow.org/" target="_blank" class="btn btn-outline-light">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Kubeflow</h5>
+                            <p class="card-text text-light">Machine learning toolkit for Kubernetes deployment.</p>
+                            <a href="https://www.kubeflow.org/" target="_blank" class="btn btn-outline-light">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Docker</h5>
+                            <p class="card-text text-light">Containerization platform for consistent ML model deployment.</p>
+                            <a href="https://www.docker.com/" target="_blank" class="btn btn-outline-light">Learn Docker</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Apache Airflow</h5>
+                            <p class="card-text text-light">Workflow orchestration platform for ML pipelines.</p>
+                            <a href="https://airflow.apache.org/" target="_blank" class="btn btn-outline-light">View Docs</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Weights & Biases</h5>
+                            <p class="card-text text-light">ML experiment tracking, hyperparameter tuning, and collaboration.</p>
+                            <a href="https://wandb.ai/" target="_blank" class="btn btn-outline-light">Try Wandb</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">DVC (Data Version Control)</h5>
+                            <p class="card-text text-light">Git for data and ML models with pipeline versioning.</p>
+                            <a href="https://dvc.org/" target="_blank" class="btn btn-outline-light">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Seldon Core</h5>
+                            <p class="card-text text-light">ML model deployment and management on Kubernetes.</p>
+                            <a href="https://docs.seldon.io/" target="_blank" class="btn btn-outline-light">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">BentoML</h5>
+                            <p class="card-text text-light">Framework for serving ML models in production.</p>
+                            <a href="https://bentoml.org/" target="_blank" class="btn btn-outline-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Neptune.ai</h5>
+                            <p class="card-text text-light">ML experiment management and model registry platform.</p>
+                            <a href="https://neptune.ai/" target="_blank" class="btn btn-outline-light">Try Neptune</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Processing & Analytics -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">
+                <i class="fas fa-database me-3"></i>Data Processing & Analytics
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Apache Spark</h5>
+                            <p class="card-text text-light">Unified analytics engine for large-scale data processing.</p>
+                            <a href="https://spark.apache.org/" target="_blank" class="btn btn-outline-light">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Apache Kafka</h5>
+                            <p class="card-text text-light">Distributed streaming platform for real-time data pipelines.</p>
+                            <a href="https://kafka.apache.org/" target="_blank" class="btn btn-outline-light">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Elasticsearch</h5>
+                            <p class="card-text text-light">Distributed search and analytics engine for all types of data.</p>
+                            <a href="https://www.elastic.co/" target="_blank" class="btn btn-outline-light">Explore Elastic</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Apache Hadoop</h5>
+                            <p class="card-text text-light">Framework for distributed storage and processing of big data.</p>
+                            <a href="https://hadoop.apache.org/" target="_blank" class="btn btn-outline-light">Learn Hadoop</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">ClickHouse</h5>
+                            <p class="card-text text-light">Fast open-source column-oriented database for analytics.</p>
+                            <a href="https://clickhouse.com/" target="_blank" class="btn btn-outline-light">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Apache Flink</h5>
+                            <p class="card-text text-light">Stream processing framework for real-time analytics.</p>
+                            <a href="https://flink.apache.org/" target="_blank" class="btn btn-outline-light">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Infrastructure & Computing -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">
+                <i class="fas fa-server me-3"></i>Infrastructure & Computing
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">NVIDIA CUDA</h5>
+                            <p class="card-text text-light">Parallel computing platform for GPU-accelerated applications.</p>
+                            <a href="https://developer.nvidia.com/cuda-zone" target="_blank" class="btn btn-outline-light">Learn CUDA</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Kubernetes</h5>
+                            <p class="card-text text-light">Container orchestration for scalable AI application deployment.</p>
+                            <a href="https://kubernetes.io/" target="_blank" class="btn btn-outline-light">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Apache Mesos</h5>
+                            <p class="card-text text-light">Distributed systems kernel for resource management.</p>
+                            <a href="https://mesos.apache.org/" target="_blank" class="btn btn-outline-light">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Ray</h5>
+                            <p class="card-text text-light">Distributed computing framework for ML and AI applications.</p>
+                            <a href="https://ray.io/" target="_blank" class="btn btn-outline-light">Try Ray</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Apache OpenWhisk</h5>
+                            <p class="card-text text-light">Serverless computing platform for event-driven AI functions.</p>
+                            <a href="https://openwhisk.apache.org/" target="_blank" class="btn btn-outline-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Dask</h5>
+                            <p class="card-text text-light">Parallel computing library that scales Python analytics.</p>
+                            <a href="https://dask.org/" target="_blank" class="btn btn-outline-light">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Development & Collaboration Tools -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">
+                <i class="fas fa-tools me-3"></i>Development & Collaboration Tools
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Jupyter Notebooks</h5>
+                            <p class="card-text text-light">Interactive computing environment for data science and AI development.</p>
+                            <a href="https://jupyter.org/" target="_blank" class="btn btn-outline-light">Try Jupyter</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Google Colab</h5>
+                            <p class="card-text text-light">Free cloud-based Jupyter notebook environment with GPU support.</p>
+                            <a href="https://colab.research.google.com/" target="_blank" class="btn btn-outline-light">Open Colab</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">GitHub Codespaces</h5>
+                            <p class="card-text text-light">Cloud development environments for AI and ML projects.</p>
+                            <a href="https://github.com/features/codespaces" target="_blank" class="btn btn-outline-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Apache Zeppelin</h5>
+                            <p class="card-text text-light">Web-based notebook for data analytics and visualization.</p>
+                            <a href="https://zeppelin.apache.org/" target="_blank" class="btn btn-outline-light">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Streamlit</h5>
+                            <p class="card-text text-light">Framework for building and sharing ML web applications.</p>
+                            <a href="https://streamlit.io/" target="_blank" class="btn btn-outline-light">Build Apps</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Gradio</h5>
+                            <p class="card-text text-light">Build and share ML model interfaces quickly.</p>
+                            <a href="https://gradio.app/" target="_blank" class="btn btn-outline-light">Try Gradio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Platform Comparison Guides -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">
+                <i class="fas fa-balance-scale me-3"></i>Platform Comparison & Selection Guides
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Cloud AI Platform Comparison</h5>
+                            <p class="card-text text-light">Comprehensive comparison of AWS, GCP, Azure, and IBM AI services.</p>
+                            <small class="text-muted">Gartner Research - 2024</small><br>
+                            <a href="https://www.gartner.com/en/information-technology/insights/cloud-computing" target="_blank" class="btn btn-outline-light mt-2">View Report</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">ML Framework Benchmarks</h5>
+                            <p class="card-text text-light">Performance comparison of TensorFlow, PyTorch, and other frameworks.</p>
+                            <small class="text-muted">Papers with Code - 2024</small><br>
+                            <a href="https://paperswithcode.com/sota" target="_blank" class="btn btn-outline-light mt-2">View Benchmarks</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">MLOps Tools Comparison</h5>
+                            <p class="card-text text-light">Evaluation matrix for MLOps platforms and deployment tools.</p>
+                            <small class="text-muted">ML Engineering Guide - 2024</small><br>
+                            <a href="https://mlops.toys/" target="_blank" class="btn btn-outline-light mt-2">Compare Tools</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Data Platform Architecture</h5>
+                            <p class="card-text text-light">Reference architectures for modern data and AI platforms.</p>
+                            <small class="text-muted">Enterprise Architecture - 2024</small><br>
+                            <a href="https://aws.amazon.com/architecture/" target="_blank" class="btn btn-outline-light mt-2">View Architectures</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card bg-dark border-secondary">
+                <div class="card-body text-center p-5">
+                    <h3 class="fw-bold text-white mb-3" style="font-family: 'League Spartan', sans-serif;">Need Help Choosing Your AI Technology Stack?</h3>
+                    <p class="fs-5 text-light mb-4" style="font-family: 'Source Sans Pro', sans-serif;">
+                        Take our comprehensive AI readiness assessment to get personalized recommendations for your technology infrastructure based on your specific requirements and constraints.
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="{{ url_for('assessment') }}" class="btn btn-outline-light btn-lg">Start Assessment</a>
+                        <a href="{{ url_for('resources') }}" class="btn btn-light btn-lg">Back to Resources</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom Breadcrumb Styling -->
+<style>
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #6c757d;
+    content: var(--bs-breadcrumb-divider, "/");
+}
+.breadcrumb a {
+    text-decoration: none;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+</style>
+{% endblock %}

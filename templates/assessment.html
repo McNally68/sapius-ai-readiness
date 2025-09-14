@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}AI Readiness Assessment - AIReady{% endblock %}
+
+{% block content %}
+<div class="assessment-container">
+    <div class="container">
+        <div class="assessment-header">
+            <h1>AI Readiness Assessment</h1>
+            <p>Please answer all questions honestly to receive accurate recommendations for your AI journey.</p>
+        </div>
+
+        <form id="assessmentForm" class="assessment-form">
+            <!-- Company Information -->
+            <div class="form-section">
+                <h2>Company Information</h2>
+                <div class="form-group">
+                    <label for="company-name">Company Name</label>
+                    <input type="text" id="company-name" name="company-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="company-size">Company Size</label>
+                    <select id="company-size" name="company-size" required>
+                        <option value="">Select size</option>
+                        <option value="1-10">1-10 employees</option>
+                        <option value="11-50">11-50 employees</option>
+                        <option value="51-200">51-200 employees</option>
+                        <option value="201-1000">201-1000 employees</option>
+                        <option value="1000+">1000+ employees</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="industry">Industry</label>
+                    <input type="text" id="industry" name="industry" placeholder="e.g., Healthcare, Finance, Manufacturing" required>
+                </div>
+            </div>
+
+            {% for category, category_data in categories.items() %}
+            <div class="form-section">
+                <h2>{{ category_data.name }}</h2>
+                <p class="section-description">{{ category_data.description }}</p>
+                
+                {% for question in questions[category] %}
+                <div class="question-group">
+                    <h3 class="question-title">{{ question.question }}</h3>
+                    <div class="radio-group">
+                        {% for option in question.options %}
+                        <label class="radio-option">
+                            <input type="radio" name="{{ question.id }}" value="{{ option.value }}" required>
+                            <span class="radio-custom"></span>
+                            <span class="radio-text">{{ option.text }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-large" id="calculateBtn">
+                    <i class="fas fa-calculator"></i>
+                    Calculate AI Readiness Score
+                </button>
+            </div>
+        </form>
+
+        <div id="loadingMessage" class="loading-message" style="display: none;">
+            <i class="fas fa-spinner fa-spin"></i>
+            Calculating your AI readiness score...
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('assessmentForm');
+    const loadingMessage = document.getElementById('loadingMessage');
+    const calculateBtn = document.getElementById('calculateBtn');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        loadingMessage.style.display = 'block';
+        calculateBtn.disabled = true;
+        
+        // Collect form data
+        const formData = new FormData(form);
+        const responses = [];
+        const companyInfo = {
+            name: formData.get('company-name'),
+            size: formData.get('company-size'),
+            industry: formData.get('industry')
+        };
+        
+        // Process question responses
+        {% for category, questions_list in questions.items() %}
+        {% for question in questions_list %}
+        const {{ question.id }}_value = formData.get('{{ question.id }}');
+        if ({{ question.id }}_value) {
+            responses.push({
+                question_id: '{{ question.id }}',
+                score: parseInt({{ question.id }}_value)
+            });
+        }
+        {% endfor %}
+        {% endfor %}
+        
+        // Submit to backend
+        fetch('/api/submit_assessment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                responses: responses,
+                company_info: companyInfo
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Redirect to results page
+                window.location.href = '/results/' + data.assessment_id;
+            } else {
+                alert('Error calculating score. Please try again.');
+                loadingMessage.style.display = 'none';
+                calculateBtn.disabled = false;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error calculating score. Please try again.');
+            loadingMessage.style.display = 'none';
+            calculateBtn.disabled = false;
+        });
+    });
+});
+</script>
+{% endblock %}

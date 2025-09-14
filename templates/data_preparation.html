@@ -1,0 +1,410 @@
+{% extends "base.html" %}
+
+{% block title %}Data Preparation Resources - Sapius AI Readiness{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="mb-5">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url_for('resources') }}" class="text-light">Resources</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Data Preparation</li>
+                    </ol>
+                </nav>
+                <h1 class="display-4 fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">Data Preparation for AI</h1>
+                <p class="fs-5 text-light mb-4" style="font-family: 'Source Sans Pro', sans-serif;">
+                    Comprehensive resources for preparing your data infrastructure for AI implementation. 
+                    Quality data is the foundation of successful AI projects.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Quality & Assessment -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">
+                <i class="fas fa-search me-3"></i>Data Quality & Assessment
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Data Quality Assessment Framework</h5>
+                            <p class="card-text text-light">MIT's comprehensive guide to evaluating data quality dimensions.</p>
+                            <a href="https://mitsloan.mit.edu/ideas-made-to-matter/machine-learning-explained" target="_blank" class="btn btn-outline-light">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Data Profiling Best Practices</h5>
+                            <p class="card-text text-light">Google's guide to understanding your data through profiling techniques.</p>
+                            <a href="https://developers.google.com/machine-learning/data-prep" target="_blank" class="btn btn-outline-light">View Guide</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Data Quality Metrics</h5>
+                            <p class="card-text text-light">Harvard Business Review article on measuring data quality for AI.</p>
+                            <a href="https://hbr.org/2020/02/getting-your-data-ready-for-artificial-intelligence" target="_blank" class="btn btn-outline-light">Read Article</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Cleaning & Preprocessing -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">
+                <i class="fas fa-broom me-3"></i>Data Cleaning & Preprocessing
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Pandas Data Cleaning Tutorial</h5>
+                            <p class="card-text text-light">Comprehensive Python tutorial for data cleaning with real-world examples.</p>
+                            <a href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/07_reshape_table_layout.html" target="_blank" class="btn btn-outline-light">View Tutorial</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">OpenAI Data Preparation Guide</h5>
+                            <p class="card-text text-light">Best practices for preparing data for machine learning models.</p>
+                            <a href="https://platform.openai.com/docs/guides/fine-tuning/preparing-your-dataset" target="_blank" class="btn btn-outline-light">Read Guide</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Missing Data Handling</h5>
+                            <p class="card-text text-light">Scikit-learn documentation on handling missing values in datasets.</p>
+                            <a href="https://scikit-learn.org/stable/modules/impute.html" target="_blank" class="btn btn-outline-light">View Docs</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Feature Engineering Guide</h5>
+                            <p class="card-text text-light">Kaggle's comprehensive course on feature engineering techniques.</p>
+                            <a href="https://www.kaggle.com/learn/feature-engineering" target="_blank" class="btn btn-outline-light">Take Course</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Data Transformation Techniques</h5>
+                            <p class="card-text text-light">Microsoft's guide to data transformation for AI workloads.</p>
+                            <a href="https://docs.microsoft.com/en-us/azure/machine-learning/how-to-designer-transform-data" target="_blank" class="btn btn-outline-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Data Validation Frameworks</h5>
+                            <p class="card-text text-light">TensorFlow Data Validation (TFDV) for automated data validation.</p>
+                            <a href="https://www.tensorflow.org/tfx/data_validation/get_started" target="_blank" class="btn btn-outline-light">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Integration & ETL -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">
+                <i class="fas fa-exchange-alt me-3"></i>Data Integration & ETL
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Apache Airflow Documentation</h5>
+                            <p class="card-text text-light">Open-source platform for workflow orchestration and data pipeline management.</p>
+                            <a href="https://airflow.apache.org/docs/apache-airflow/stable/index.html" target="_blank" class="btn btn-outline-light">View Docs</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">AWS Data Pipeline Best Practices</h5>
+                            <p class="card-text text-light">Amazon's guide to building robust data pipelines in the cloud.</p>
+                            <a href="https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/data-processing.html" target="_blank" class="btn btn-outline-light">Read Guide</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Apache Spark for Big Data</h5>
+                            <p class="card-text text-light">Getting started with Apache Spark for large-scale data processing.</p>
+                            <a href="https://spark.apache.org/docs/latest/quick-start.html" target="_blank" class="btn btn-outline-light">Quick Start</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Google Cloud Data Fusion</h5>
+                            <p class="card-text text-light">Cloud-native data integration service for building ETL/ELT pipelines.</p>
+                            <a href="https://cloud.google.com/data-fusion/docs" target="_blank" class="btn btn-outline-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">dbt (Data Build Tool)</h5>
+                            <p class="card-text text-light">Transform data in your warehouse by writing select statements.</p>
+                            <a href="https://docs.getdbt.com/docs/introduction" target="_blank" class="btn btn-outline-light">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Real-time Data Streaming</h5>
+                            <p class="card-text text-light">Apache Kafka documentation for building real-time data pipelines.</p>
+                            <a href="https://kafka.apache.org/documentation/" target="_blank" class="btn btn-outline-light">View Docs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Governance & Security -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">
+                <i class="fas fa-shield-alt me-3"></i>Data Governance & Security
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">GDPR Compliance for AI</h5>
+                            <p class="card-text text-light">European Commission guidance on AI and data protection regulation.</p>
+                            <a href="https://ec.europa.eu/info/law/law-topic/data-protection_en" target="_blank" class="btn btn-outline-light">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Data Privacy by Design</h5>
+                            <p class="card-text text-light">NIST guidelines for privacy engineering and risk management.</p>
+                            <a href="https://www.nist.gov/privacy-framework" target="_blank" class="btn btn-outline-light">View Framework</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Data Lineage & Cataloging</h5>
+                            <p class="card-text text-light">Apache Atlas documentation for data governance and metadata management.</p>
+                            <a href="https://atlas.apache.org/#/" target="_blank" class="btn btn-outline-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Differential Privacy</h5>
+                            <p class="card-text text-light">Microsoft's guide to implementing differential privacy in ML systems.</p>
+                            <a href="https://docs.microsoft.com/en-us/azure/machine-learning/concept-differential-privacy" target="_blank" class="btn btn-outline-light">Read Guide</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Data Masking Techniques</h5>
+                            <p class="card-text text-light">IBM's comprehensive guide to data masking and anonymization.</p>
+                            <a href="https://www.ibm.com/cloud/learn/data-masking" target="_blank" class="btn btn-outline-light">View Guide</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Audit & Compliance</h5>
+                            <p class="card-text text-light">AWS guide to data governance and compliance in machine learning.</p>
+                            <a href="https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/governance.html" target="_blank" class="btn btn-outline-light">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Datasets & Tools -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">
+                <i class="fas fa-tools me-3"></i>Open Datasets & Tools
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Kaggle Datasets</h5>
+                            <p class="card-text text-light">Thousands of public datasets for machine learning practice and research.</p>
+                            <a href="https://www.kaggle.com/datasets" target="_blank" class="btn btn-outline-light">Browse Datasets</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">UCI ML Repository</h5>
+                            <p class="card-text text-light">Collection of databases, domain theories, and data generators for ML research.</p>
+                            <a href="https://archive.ics.uci.edu/ml/index.php" target="_blank" class="btn btn-outline-light">Explore Repository</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Google Dataset Search</h5>
+                            <p class="card-text text-light">Search for datasets across thousands of repositories on the web.</p>
+                            <a href="https://datasetsearch.research.google.com/" target="_blank" class="btn btn-outline-light">Search Datasets</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">AWS Open Data</h5>
+                            <p class="card-text text-light">Registry of open data on AWS with examples and usage tutorials.</p>
+                            <a href="https://registry.opendata.aws/" target="_blank" class="btn btn-outline-light">View Registry</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Great Expectations</h5>
+                            <p class="card-text text-light">Open-source tool for data validation, documentation, and profiling.</p>
+                            <a href="https://greatexpectations.io/" target="_blank" class="btn btn-outline-light">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Apache Superset</h5>
+                            <p class="card-text text-light">Modern data exploration and visualization platform.</p>
+                            <a href="https://superset.apache.org/" target="_blank" class="btn btn-outline-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Research Papers & Whitepapers -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">
+                <i class="fas fa-file-alt me-3"></i>Research Papers & Whitepapers
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Data Management for Machine Learning</h5>
+                            <p class="card-text text-light">Comprehensive survey on data management challenges in ML systems.</p>
+                            <small class="text-muted">MIT CSAIL - 2022</small><br>
+                            <a href="https://arxiv.org/abs/2109.13471" target="_blank" class="btn btn-outline-light mt-2">Read Paper</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Hidden Technical Debt in ML Systems</h5>
+                            <p class="card-text text-light">Google's influential paper on maintaining ML systems in production.</p>
+                            <small class="text-muted">Google Research - 2015</small><br>
+                            <a href="https://papers.nips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf" target="_blank" class="btn btn-outline-light mt-2">Read Paper</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Data Validation for ML Pipelines</h5>
+                            <p class="card-text text-light">Best practices for data validation in production ML systems.</p>
+                            <small class="text-muted">TensorFlow Team - 2019</small><br>
+                            <a href="https://research.google/pubs/pub48061/" target="_blank" class="btn btn-outline-light mt-2">Read Paper</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Enterprise Data Science Strategy</h5>
+                            <p class="card-text text-light">McKinsey whitepaper on scaling data science in enterprise organizations.</p>
+                            <small class="text-muted">McKinsey & Company - 2023</small><br>
+                            <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights" target="_blank" class="btn btn-outline-light mt-2">View Insights</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card bg-dark border-secondary">
+                <div class="card-body text-center p-5">
+                    <h3 class="fw-bold text-white mb-3" style="font-family: 'League Spartan', sans-serif;">Ready to Assess Your Data Readiness?</h3>
+                    <p class="fs-5 text-light mb-4" style="font-family: 'Source Sans Pro', sans-serif;">
+                        Take our comprehensive AI readiness assessment to evaluate your organization's data infrastructure and get personalized recommendations.
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="{{ url_for('assessment') }}" class="btn btn-outline-light btn-lg">Start Assessment</a>
+                        <a href="{{ url_for('resources') }}" class="btn btn-light btn-lg">Back to Resources</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom Breadcrumb Styling -->
+<style>
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #6c757d;
+    content: var(--bs-breadcrumb-divider, "/");
+}
+.breadcrumb a {
+    text-decoration: none;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+</style>
+{% endblock %}

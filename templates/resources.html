@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+
+{% block title %}AI Resources - AIReady{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12 text-center mb-5">
+            <h1 class="display-4 fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">Sapius AI Implementation Resources</h1>
+            <p class="fs-5 text-light" style="font-family: 'Source Sans Pro', sans-serif;">Comprehensive guides and tools to accelerate your AI adoption journey</p>
+        </div>
+    </div>
+
+        <div class="resource-categories">
+            <div class="resource-section">
+                <h2>Getting Started</h2>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>AI Strategy Framework</h3>
+                        <p>Step-by-step guide to developing your organization's AI strategy and roadmap.</p>
+                        <ul>
+                            <li>Vision and goal setting</li>
+                            <li>Stakeholder alignment</li>
+                            <li>Success metrics definition</li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>Building AI Teams</h3>
+                        <p>Best practices for assembling and managing successful AI implementation teams.</p>
+                        <ul>
+                            <li>Role definitions and responsibilities</li>
+                            <li>Skill requirements and training</li>
+                            <li>Team structure and governance</li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>ROI Measurement</h3>
+                        <p>Methods and frameworks for measuring the return on investment of AI initiatives.</p>
+                        <ul>
+                            <li>KPI identification</li>
+                            <li>Baseline establishment</li>
+                            <li>Impact tracking methodologies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resource-section">
+                <h2>Technical Implementation</h2>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3><a href="{{ url_for('data_preparation') }}" style="color: inherit; text-decoration: none;">Data Preparation</a></h3>
+                        <p>Guidelines for preparing your data infrastructure for AI applications.</p>
+                        <ul>
+                            <li>Data quality assessment</li>
+                            <li>Integration strategies</li>
+                            <li>Governance frameworks</li>
+                        </ul>
+                        <div class="mt-3">
+                            <a href="{{ url_for('data_preparation') }}" class="btn btn-primary">View Resources</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3><a href="{{ url_for('technology_stack') }}" style="color: inherit; text-decoration: none;">Technology Stack</a></h3>
+                        <p>Recommendations for AI tools, platforms, and infrastructure components.</p>
+                        <ul>
+                            <li>Platform comparisons</li>
+                            <li>Integration requirements</li>
+                            <li>Scalability considerations</li>
+                        </ul>
+                        <div class="mt-3">
+                            <a href="{{ url_for('technology_stack') }}" class="btn btn-primary">View Resources</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>AI Ethics & Security</h3>
+                        <p>Framework for responsible AI implementation with proper security measures.</p>
+                        <ul>
+                            <li>Ethical AI principles</li>
+                            <li>Bias detection and mitigation</li>
+                            <li>Security best practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resource-section">
+                <h2>Industry-Specific Guides</h2>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Healthcare AI</h3>
+                        <p>Specialized guidance for AI implementation in healthcare organizations.</p>
+                        <ul>
+                            <li>Regulatory compliance (HIPAA, FDA)</li>
+                            <li>Clinical workflow integration</li>
+                            <li>Patient data privacy</li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>Financial Services</h3>
+                        <p>AI adoption strategies tailored for banking and financial institutions.</p>
+                        <ul>
+                            <li>Risk management integration</li>
+                            <li>Regulatory compliance</li>
+                            <li>Customer experience enhancement</li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Manufacturing</h3>
+                        <p>Implementation guides for AI in manufacturing and industrial settings.</p>
+                        <ul>
+                            <li>Predictive maintenance</li>
+                            <li>Quality control automation</li>
+                            <li>Supply chain optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resource-section">
+                <h2>Training & Development</h2>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>AI Literacy Program</h3>
+                        <p>Comprehensive training curriculum for building AI awareness across your organization.</p>
+                        <ul>
+                            <li>Executive briefings</li>
+                            <li>Manager training modules</li>
+                            <li>Employee awareness sessions</li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Technical Skills</h3>
+                        <p>Hands-on training resources for technical teams implementing AI solutions.</p>
+                        <ul>
+                            <li>Machine learning fundamentals</li>
+                            <li>Data science methodologies</li>
+                            <li>AI platform certifications</li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Change Management</h3>
+                        <p>Strategies for managing organizational change during AI transformation.</p>
+                        <ul>
+                            <li>Communication strategies</li>
+                            <li>Resistance management</li>
+                            <li>Adoption tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="additional-resources">
+            <h2>Additional Resources</h2>
+            <div class="links-section">
+                <div class="links-column">
+                    <h3>Research & Reports</h3>
+                    <ul>
+                        <li><a href="#">State of AI Adoption 2024</a></li>
+                        <li><a href="#">AI ROI Benchmark Study</a></li>
+                        <li><a href="#">Industry AI Maturity Report</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h3>Tools & Templates</h3>
+                    <ul>
+                        <li><a href="#">AI Readiness Checklist</a></li>
+                        <li><a href="#">Project Planning Template</a></li>
+                        <li><a href="#">ROI Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h3>Community & Support</h3>
+                    <ul>
+                        <li><a href="#">AI Implementation Forum</a></li>
+                        <li><a href="#">Expert Consultation</a></li>
+                        <li><a href="#">Best Practices Network</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to Start Your AI Journey?</h2>
+            <p>Take our comprehensive assessment to get personalized recommendations for your organization.</p>
+            <a href="/assessment" class="btn btn-primary btn-large">Take the Assessment</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
