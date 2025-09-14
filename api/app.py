@@ -8,9 +8,12 @@ Based on insights from organizational AI research
 from flask import Flask, render_template, request, jsonify, session, redirect
 import json
 import uuid
+import os
 from datetime import datetime
 
-app = Flask(__name__)
+app = Flask(__name__, 
+            template_folder='../templates',
+            static_folder='../static')
 app.secret_key = 'ai_readiness_assessment_2025'
 
 # Assessment categories and scoring weights
