@@ -1,0 +1,410 @@
+{% extends "base.html" %}
+
+{% block title %}Privacy & Data Rights Resources - Sapius{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12 text-center mb-5">
+            <h1 class="display-4 fw-bold text-white mb-4" style="font-family: 'League Spartan', sans-serif;">Privacy & Data Rights Resources</h1>
+            <p class="fs-5 text-light" style="font-family: 'Source Sans Pro', sans-serif;">Comprehensive guides and tools for protecting individual privacy rights in AI systems</p>
+        </div>
+    </div>
+
+    <div class="resource-categories">
+        <!-- Privacy by Design -->
+        <div class="resource-section">
+            <h2>Privacy by Design Frameworks</h2>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3><a href="https://www.ipc.on.ca/wp-content/uploads/resources/7foundationalprinciples.pdf" target="_blank">Privacy by Design - 7 Foundational Principles</a></h3>
+                    <p>The original framework by Dr. Ann Cavoukian outlining the seven foundational principles of Privacy by Design.</p>
+                    <ul>
+                        <li>Proactive not reactive measures</li>
+                        <li>Privacy as the default setting</li>
+                        <li>Privacy embedded into design</li>
+                        <li>Full functionality - positive sum</li>
+                        <li>End-to-end security</li>
+                        <li>Visibility and transparency</li>
+                        <li>Respect for user privacy</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-primary">Framework</span>
+                        <span class="badge bg-secondary">Free</span>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3><a href="https://www.privacybydesign.ca/" target="_blank">Privacy by Design Centre of Excellence</a></h3>
+                    <p>The official repository for Privacy by Design resources, tools, and implementation guidance.</p>
+                    <ul>
+                        <li>Implementation guides</li>
+                        <li>Case studies and best practices</li>
+                        <li>Training materials</li>
+                        <li>Assessment tools</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-primary">Resource Hub</span>
+                        <span class="badge bg-secondary">Free</span>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3><a href="https://www.enisa.europa.eu/publications/privacy-and-data-protection-by-design" target="_blank">ENISA Privacy and Data Protection by Design</a></h3>
+                    <p>European Union Agency for Cybersecurity guidance on implementing privacy by design in digital systems.</p>
+                    <ul>
+                        <li>EU regulatory perspective</li>
+                        <li>Technical implementation guidelines</li>
+                        <li>Risk assessment frameworks</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-warning">EU Focus</span>
+                        <span class="badge bg-secondary">Free</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GDPR Compliance -->
+        <div class="resource-section">
+            <h2>GDPR & Data Protection Compliance</h2>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3><a href="https://gdpr.eu/" target="_blank">GDPR.eu - Complete GDPR Compliance Guide</a></h3>
+                    <p>Comprehensive resource for understanding and implementing GDPR compliance requirements.</p>
+                    <ul>
+                        <li>Article-by-article explanations</li>
+                        <li>Compliance checklists</li>
+                        <li>Templates and forms</li>
+                        <li>Industry-specific guidance</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-primary">Comprehensive</span>
+                        <span class="badge bg-secondary">Free</span>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3><a href="https://ico.org.uk/for-organisations/guide-to-data-protection/" target="_blank">ICO Guide to Data Protection</a></h3>
+                    <p>UK Information Commissioner's Office comprehensive guide to data protection laws and compliance.</p>
+                    <ul>
+                        <li>Data protection principles</li>
+                        <li>Lawful basis for processing</li>
+                        <li>Individual rights guidance</li>
+                        <li>Data breach procedures</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-info">UK Authority</span>
+                        <span class="badge bg-secondary">Free</span>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3><a href="https://edpb.europa.eu/our-work-tools/our-documents/guidelines_en" target="_blank">EDPB Guidelines</a></h3>
+                    <p>European Data Protection Board guidelines for consistent application of GDPR across EU member states.</p>
+                    <ul>
+                        <li>AI and automated decision-making</li>
+                        <li>Data protection impact assessments</li>
+                        <li>Consent guidelines</li>
+                        <li>International transfers</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-warning">EU Official</span>
+                        <span class="badge bg-secondary">Free</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Consent Management -->
+        <div class="resource-section">
+            <h2>Consent Management & User Rights</h2>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-hand-paper"></i>
+                    </div>
+                    <h3><a href="https://www.consentua.com/blog/consent-management-best-practices" target="_blank">Consent Management Best Practices</a></h3>
+                    <p>Comprehensive guide to implementing effective consent management systems for AI applications.</p>
+                    <ul>
+                        <li>Granular consent mechanisms</li>
+                        <li>Consent withdrawal processes</li>
+                        <li>Consent logging and auditing</li>
+                        <li>Dynamic consent frameworks</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-success">Best Practices</span>
+                        <span class="badge bg-secondary">Free</span>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3><a href="https://kantarainitiative.org/confluence/display/uma/Home" target="_blank">Kantara Initiative - User Managed Access</a></h3>
+                    <p>Open standards for user-controlled authorization and consent management in digital services.</p>
+                    <ul>
+                        <li>UMA 2.0 specifications</li>
+                        <li>Implementation guides</li>
+                        <li>Certification programs</li>
+                        <li>Community resources</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-primary">Standards</span>
+                        <span class="badge bg-secondary">Free</span>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3><a href="https://www.privacytools.io/" target="_blank">Privacy Tools - Consumer Resources</a></h3>
+                    <p>Curated list of privacy-focused tools and services for individuals to protect their data rights.</p>
+                    <ul>
+                        <li>Privacy-focused browsers and search engines</li>
+                        <li>Secure messaging applications</li>
+                        <li>VPN and anonymity tools</li>
+                        <li>Data deletion services</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-info">Consumer Tools</span>
+                        <span class="badge bg-secondary">Free</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Subject Rights -->
+        <div class="resource-section">
+            <h2>Data Subject Rights Implementation</h2>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3><a href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/" target="_blank">ICO Individual Rights Guide</a></h3>
+                    <p>Detailed guidance on implementing all eight individual rights under GDPR in AI systems.</p>
+                    <ul>
+                        <li>Right to be informed</li>
+                        <li>Right of access (data portability)</li>
+                        <li>Right to rectification</li>
+                        <li>Right to erasure ('right to be forgotten')</li>
+                        <li>Right to restrict processing</li>
+                        <li>Right to object</li>
+                        <li>Rights related to automated decision making</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-info">Implementation</span>
+                        <span class="badge bg-secondary">Free</span>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3><a href="https://www.datatransferproject.dev/" target="_blank">Data Transfer Project</a></h3>
+                    <p>Open-source platform enabling direct transfer of data between service providers to support data portability.</p>
+                    <ul>
+                        <li>Data portability standards</li>
+                        <li>Cross-platform transfer protocols</li>
+                        <li>API specifications</li>
+                        <li>Implementation examples</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-success">Open Source</span>
+                        <span class="badge bg-secondary">Free</span>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-eraser"></i>
+                    </div>
+                    <h3><a href="https://www.forgetful.app/" target="_blank">Right to Erasure Implementation</a></h3>
+                    <p>Technical guidance and tools for implementing the right to erasure in AI systems and databases.</p>
+                    <ul>
+                        <li>Data mapping and inventory</li>
+                        <li>Automated deletion procedures</li>
+                        <li>Audit trails and compliance tracking</li>
+                        <li>Third-party integration</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-danger">Erasure Focus</span>
+                        <span class="badge bg-warning">Freemium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Privacy Impact Assessments -->
+        <div class="resource-section">
+            <h2>Privacy Impact Assessment Tools</h2>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3><a href="https://www.cnil.fr/en/privacy-impact-assessment-pia" target="_blank">CNIL PIA Software</a></h3>
+                    <p>Free software tool from the French Data Protection Authority for conducting privacy impact assessments.</p>
+                    <ul>
+                        <li>Step-by-step PIA process</li>
+                        <li>Risk assessment methodologies</li>
+                        <li>Mitigation planning tools</li>
+                        <li>Compliance documentation</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-primary">Software Tool</span>
+                        <span class="badge bg-secondary">Free</span>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3><a href="https://iapp.org/resources/article/sample-privacy-impact-assessment-framework/" target="_blank">IAPP PIA Framework</a></h3>
+                    <p>International Association of Privacy Professionals comprehensive framework for privacy impact assessments.</p>
+                    <ul>
+                        <li>Industry best practices</li>
+                        <li>Sample assessment templates</li>
+                        <li>Risk scoring methodologies</li>
+                        <li>Professional guidance</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-primary">Professional</span>
+                        <span class="badge bg-warning">Member Access</span>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3><a href="https://www.ai-ethicist.org/pia-toolkit" target="_blank">AI Ethics PIA Toolkit</a></h3>
+                    <p>Specialized privacy impact assessment tools designed specifically for AI and machine learning systems.</p>
+                    <ul>
+                        <li>AI-specific risk factors</li>
+                        <li>Algorithmic transparency assessments</li>
+                        <li>Bias impact evaluation</li>
+                        <li>Automated decision-making analysis</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-info">AI Specialized</span>
+                        <span class="badge bg-secondary">Free</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Global Privacy Laws -->
+        <div class="resource-section">
+            <h2>Global Privacy Law Resources</h2>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-flag-usa"></i>
+                    </div>
+                    <h3><a href="https://ccpa-info.com/" target="_blank">California Consumer Privacy Act (CCPA)</a></h3>
+                    <p>Comprehensive guide to CCPA compliance requirements for businesses operating in California.</p>
+                    <ul>
+                        <li>Consumer rights under CCPA</li>
+                        <li>Business obligations</li>
+                        <li>Implementation timelines</li>
+                        <li>Enforcement and penalties</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-danger">California</span>
+                        <span class="badge bg-secondary">Free</span>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3><a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/" target="_blank">Privacy Laws in Canada</a></h3>
+                    <p>Office of the Privacy Commissioner of Canada resource on federal and provincial privacy legislation.</p>
+                    <ul>
+                        <li>PIPEDA compliance guidance</li>
+                        <li>Provincial privacy laws</li>
+                        <li>Sector-specific regulations</li>
+                        <li>Cross-border data transfers</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-danger">Canada</span>
+                        <span class="badge bg-secondary">Free</span>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <h3><a href="https://www.pdpc.gov.sg/Overview-of-PDPA" target="_blank">Singapore Personal Data Protection Act</a></h3>
+                    <p>Personal Data Protection Commission Singapore guidance on PDPA compliance and data protection.</p>
+                    <ul>
+                        <li>Data protection obligations</li>
+                        <li>Consent management requirements</li>
+                        <li>Data breach notification</li>
+                        <li>Cross-border transfer rules</li>
+                    </ul>
+                    <div class="resource-meta">
+                        <span class="badge bg-info">Singapore</span>
+                        <span class="badge bg-secondary">Free</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Resources -->
+    <div class="additional-resources">
+        <h2>Additional Privacy Resources</h2>
+        <div class="links-section">
+            <div class="links-column">
+                <h3>Professional Organizations</h3>
+                <ul>
+                    <li><a href="https://iapp.org/" target="_blank">International Association of Privacy Professionals (IAPP)</a></li>
+                    <li><a href="https://www.privacy.org/" target="_blank">Privacy International</a></li>
+                    <li><a href="https://epic.org/" target="_blank">Electronic Privacy Information Center (EPIC)</a></li>
+                    <li><a href="https://www.futureofprivacy.org/" target="_blank">Future of Privacy Forum</a></li>
+                </ul>
+            </div>
+            <div class="links-column">
+                <h3>Technical Standards</h3>
+                <ul>
+                    <li><a href="https://www.iso.org/standard/76559.html" target="_blank">ISO/IEC 27701:2019 Privacy Information Management</a></li>
+                    <li><a href="https://www.nist.gov/privacy-framework" target="_blank">NIST Privacy Framework</a></li>
+                    <li><a href="https://www.w3.org/P3P/" target="_blank">W3C Platform for Privacy Preferences (P3P)</a></li>
+                    <li><a href="https://datatracker.ietf.org/wg/dprive/about/" target="_blank">IETF DNS Privacy Working Group</a></li>
+                </ul>
+            </div>
+            <div class="links-column">
+                <h3>Research & Analysis</h3>
+                <ul>
+                    <li><a href="https://www.pewresearch.org/internet/fact-sheet/mobile/" target="_blank">Pew Research Center Privacy Studies</a></li>
+                    <li><a href="https://www.berkman.harvard.edu/" target="_blank">Berkman Klein Center for Internet & Society</a></li>
+                    <li><a href="https://cyberlaw.stanford.edu/" target="_blank">Stanford Center for Internet and Society</a></li>
+                    <li><a href="https://www.cdt.org/" target="_blank">Center for Democracy & Technology</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta-section">
+        <h2>Need Help with Privacy Implementation?</h2>
+        <p>Protecting user privacy in AI systems requires careful planning and expert guidance.</p>
+        <a href="/assessment" class="btn btn-primary btn-large">Assess Your Privacy Readiness</a>
+    </div>
+</div>
+{% endblock %}

@@ -370,6 +370,10 @@ def data_preparation():
 def technology_stack():
     return render_template('technology_stack.html')
 
+@app.route('/resources/privacy-data-rights')
+def privacy_data_rights():
+    return render_template('privacy_data_rights.html')
+
 # Export the Flask app for Vercel
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5001)

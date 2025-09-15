@@ -367,6 +367,10 @@ def data_preparation():
 def technology_stack():
     return render_template('technology_stack.html')
 
+@app.route('/resources/privacy-data-rights')
+def privacy_data_rights():
+    return render_template('privacy_data_rights.html')
+
 # For Vercel deployment
 application = app
 
