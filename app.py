@@ -371,6 +371,10 @@ def technology_stack():
 def privacy_data_rights():
     return render_template('privacy_data_rights.html')
 
+@app.route('/resources/ai-strategy-framework')
+def ai_strategy_framework():
+    return render_template('ai_strategy_framework.html')
+
 # For Vercel deployment
 application = app
 

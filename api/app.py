@@ -374,6 +374,10 @@ def technology_stack():
 def privacy_data_rights():
     return render_template('privacy_data_rights.html')
 
+@app.route('/resources/ai-strategy-framework')
+def ai_strategy_framework():
+    return render_template('ai_strategy_framework.html')
+
 # Export the Flask app for Vercel
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5001)
