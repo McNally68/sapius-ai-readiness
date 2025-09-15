@@ -763,6 +763,10 @@ body {
     background: #f9fafb;
 }
 
+.radio-option input[type="radio"] {
+    display: none;
+}
+
 .radio-option:hover {
     background: #f3f4f6;
     transform: translateX(4px);
